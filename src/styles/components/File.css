@@ -1,0 +1,7 @@
+#inputFile {
+    cursor: pointer;
+}
+
+#inputFile input {
+    display: none !important;
+}

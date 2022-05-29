@@ -1,0 +1,14 @@
+footer {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+footer ul {
+    margin: 14px 0;
+}
+
+footer :where(a, span) {
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+}

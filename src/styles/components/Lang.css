@@ -1,0 +1,30 @@
+#lang {
+    display: flex;
+}
+
+#lang span {
+    padding-top: 6px;
+}
+
+#lang .options {
+    display: flex;
+    max-width: 200px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+#lang .options button {
+    
+    display: block;
+    text-transform: uppercase;
+    box-shadow: 0 0 0 1px rgb(var(--brown));
+    border-radius: var(--r-def);
+    font-size: calc(var(--step-0) * 0.8);
+    padding: 4px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#lang .options button:where(.active, :hover) {
+    --back: var(--coffee);
+}

@@ -1,0 +1,42 @@
+.select {
+    position: relative;
+    max-width: 150px;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.default {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.default::after {
+    content: "";
+    display: block;
+    background: url("../../assets/image/arrow.png") no-repeat center/cover;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+}
+
+.select .options {
+    position: absolute;
+    background: rgb(var(--lightGray));
+    box-shadow: 0 0 0 1px rgb(var(--brown));
+    border-radius: var(--r-def);
+    transform: translate(-50%, 4%);
+    left: 50%;
+    width: fit-content;
+}
+
+.select .options span {
+    display: block;
+    padding: 6px 10px;
+}
+
+.select .options span:not(:last-child) {
+    border-bottom: 1px solid rgb(var(--brown));
+}

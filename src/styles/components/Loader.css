@@ -1,0 +1,12 @@
+#loader img {
+    width: 100px;
+    height: 100px;
+}
+
+#loader b {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(var(--brown));
+    text-align: center;
+}

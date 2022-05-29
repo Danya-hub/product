@@ -1,0 +1,52 @@
+.popup {
+    cursor: default;
+    overflow-y: scroll;
+}
+
+.popup #close {
+    position: absolute;
+    margin: 14px;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 0;
+}
+
+:where(.popup.lines, .popup .lines) > *:not(#close) {
+    display: block;
+    border-bottom: 1px solid rgba(var(--brown), 0.4);
+}
+
+.popup > *:not(#close) {
+    padding: 8px 0;
+}
+
+:where(.popup.lines, .popup .lines) > *:last-child {
+    border-bottom: unset !important;
+}
+
+.popup a {
+    display: block;
+    text-align: left;
+    padding: 6px;
+}
+
+.popup ul {
+    display: block;
+}
+
+.popup h3 {
+    margin-bottom: 6px;
+}
+
+.backPopup {
+    position: fixed;
+    background: rgba(var(--lightBlack), 0.4);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    z-index: 999;
+}

@@ -1,0 +1,136 @@
+.auth section {
+    padding: 20px 0;
+    position: relative;
+    padding: 20px 10vw;
+    height: 100vh;
+}
+
+.auth .wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 4%;
+}
+
+.auth form > * {
+    margin: 10px 6px;
+}
+
+.auth form input {
+    --spread: 1px;
+
+    box-shadow: inset 0 0 0 var(--spread) rgb(var(--brown)),
+                inset 0 0 6px rgb(var(--coffee));
+    padding: 8px 20px;
+    margin-top: 12px;
+}
+
+.auth form input:focus {
+    --spread: 2px;
+}
+
+.auth form button {
+    margin-top: 24px;
+}
+
+.auth :is(form button, #socNetwork button, #toMain) {
+    --back: rgb(var(--coffee));
+
+    box-shadow: 0 0 0 2px rgb(var(--brown));
+    padding: 10px 20px;
+    border-radius: var(--r-def);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.auth :is(form button, #socNetwork button, #toMain):hover {
+    --back: rgb(var(--brown));
+    --color: rgb(var(--white));
+}
+
+#toMain {
+    display: block;
+    font-weight: 500;
+    margin: 20px 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 4vw;
+}
+
+.auth .title {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.switch {
+    font-weight: 500;
+    color: rgb(var(--brown));
+    text-decoration: underline;
+    margin-left: 6px;
+}
+
+#error {
+    --o: 0.8;
+
+    border-radius: var(--r-def);
+    background: rgb(var(--red));
+    border: 2px solid rgb(var(--darkRed));
+    padding: 14px 20px;
+    color: rgb(var(--black));
+    opacity: var(--o);
+    cursor: pointer;
+    user-select: none;
+}
+
+#error:hover {
+    --o: 1;
+}
+
+#otherAuth {
+    position: relative;
+    background: rgb(var(--white));
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+#otherAuth::before,
+#otherAuth span {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+#otherAuth::before {
+    content: "";
+    background: rgb(var(--brown));
+    width: 80%;
+    height: 1px;
+}
+
+#otherAuth span {
+    background: rgb(var(--white));
+    padding: 0 10px;
+}
+
+.auth #socNetwork {
+    display: flex;
+    padding: 0 3vw;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.auth #socNetwork button {
+    font-weight: 500;
+}
+
+.auth .select {
+    position: absolute;
+    text-transform: uppercase;
+    width: fit-content;
+    top: 0;
+    left: 0;
+    margin: 0 20px;
+}

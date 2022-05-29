@@ -1,0 +1,12 @@
+:root {
+    --transp: 0, 0, 0, 0;
+    --black: 0, 0, 0;
+    --lightBlack: 51, 51, 51;
+    --lightGray: 245, 245, 245;
+    --brown: 128, 115, 94;
+    --lightBrown: 255, 250, 242;
+    --coffee: 226, 213, 191;
+    --darkRed: 191, 64, 64;
+    --red: 255, 127, 127;
+    --white: 255, 255, 255;
+}

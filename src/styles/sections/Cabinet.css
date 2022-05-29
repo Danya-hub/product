@@ -1,0 +1,242 @@
+#aboutUser {
+    background: rgb(var(--lightBrown));
+    padding: 20px 8%;
+}
+
+#aboutUser,
+#aboutUser > form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutUser form > * {
+    --space: calc((1vw + 1vh) * 0.7);
+    margin: 14px var(--space);
+}
+
+#aboutUser label {
+    white-space: nowrap;
+}
+
+#aboutUser .image {
+    --size: calc((1vw + 1vh) * 10);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 0 2px rgb(var(--lightBlack));
+    border-radius: var(--r-circle);
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#aboutUser .image label {
+    pointer-events: none;
+}
+
+#aboutUser .image .text {
+    position: relative;
+}
+
+#aboutUser .image::before {
+    --o: 0;
+
+    content: "";
+    position: absolute;
+    background: rgb(var(--lightBlack));
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: var(--o);
+    pointer-events: none;
+}
+
+#aboutUser .image.change::before {
+    --o: 0.4;
+}
+
+#aboutUser .image.change {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+    #aboutUser .image {
+        --size: 200px;
+    }
+}
+
+#aboutUser form input {
+    display: block;
+    padding: 0 10px;
+}
+
+#aboutUser form label {
+    display: flex;
+}
+
+#aboutUser form .text {
+    display: flex;
+    align-items: center;
+}
+
+#aboutUser form > *:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+#aboutUser #status {
+    margin-top: 10px; 
+}
+
+#aboutUser .buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutUser .buttons > * {
+    --back: var(--coffee);
+    
+    box-shadow: 0 0 0 2px rgb(var(--brown));
+    padding: 10px 20px;
+    border-radius: var(--r-def);
+    margin-top: 18px;
+}
+
+#aboutUser .buttons > *:not(:last-child) {
+    margin-right: 3vw;
+}
+
+#aboutUser .change .text > * {
+    font-size: calc((1vw + 1vh) * 1.1);
+    color: rgb(var(--white));
+    user-select: none;
+}
+
+#aboutUser form .content span {
+    display: block;
+    margin-right: 6px;
+}
+
+.newProd :where(#category, #descr > div, #image) {
+    display: flex;
+    align-items: center;
+}
+
+.newProd .select {
+    margin-left: 8px;
+}
+
+.newProd #image label {
+    margin-left: 10px;
+}
+
+:where(.newProd, #aboutUser) .input {
+    --back: var(--transp);
+
+    background: rgb(var(--back));
+    box-shadow: 0 0 0 1px rgb(var(--brown));
+    padding: 8px 10px;
+    border-radius: var(--r-def);
+}
+
+:where(.newProd, #aboutUser) .input.noChange {
+    --back: var(--lightBrown);
+}
+
+#aboutUser .content > * {
+    margin: 3px 0;
+}
+
+.newProd .backLoader {
+position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--white), 0.8);
+    z-index: 1;
+}
+
+.newProd label > * {
+    margin-top: 10px;
+}
+
+.newProd form > * {
+    margin: 10px 0;
+}
+
+.newProd textarea {
+    height: 16vh;
+}
+
+.newProd form button { 
+    --back: var(--coffee);
+    box-shadow: 0 0 0 2px rgb(var(--brown));
+    font-weight: 500;
+    border-radius: var(--r-def);
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.newProd #price > div {
+    display: flex;
+}
+
+:where(#myProducts, .newProd) .title {
+    text-align: center;
+}
+
+#newCardProd img {
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+}
+
+#myProducts .wrapper {
+    --pos: center;
+    
+    display: flex;
+    justify-content: var(--pos);
+    flex-wrap: wrap;
+    padding: 10px 4%;
+    width: 100%;
+}
+
+@media screen and (min-width: 560px) {
+    #myProducts .wrapper {
+        --pos: baseline; 
+    }
+}
+
+#myProducts .card {
+    box-shadow: 0 0 0 1px rgb(var(--lightBlack)),
+                0 0 8px rgba(var(--lightBlack), 0.4);
+    border-radius: var(--r-def);
+    width: 170px;
+    height: 260px;
+    margin: 20px 2% 2%;
+    overflow: hidden;
+}
+
+#myProducts .card img {
+    height: 50%;
+}
+
+#myProducts .card:not(#newCardProd) img {
+    object-fit: cover;
+}
+
+#myProducts .card .text {
+    padding: 10px;
+}
+
+#myProducts .card > *:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+#myProducts .title {
+    padding-top: 20px;
+}

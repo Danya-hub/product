@@ -1,0 +1,113 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 6%;
+}
+
+header>* {
+    margin: 0 1vw;
+}
+
+header>*:not(ul) {
+    align-self: center;
+}
+
+header *:not(#search)>:where(button, a) {
+    margin: 0 1vw;
+}
+
+header ul {
+    display: flex;
+}
+
+header .imageBtn {
+    min-width: 30px;
+    height: 30px;
+}
+
+header a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 100%;
+}
+
+header li a::before {
+    --o: 0;
+
+    content: "";
+    position: absolute;
+    background: rgb(var(--lightBlack));
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    opacity: var(--o);
+}
+
+header li a.active::before,
+header li a:hover::before {
+    --o: 1;
+}
+
+header :where(button) {
+    background: unset;
+}
+
+header :is(#catalog, #find) {
+    --back: var(--coffee);
+    padding: 8px 20px;
+}
+
+header :is(#catalog, #search) {
+    box-shadow: 0 0 0 1px rgb(var(--brown));
+    border-radius: var(--r-def);
+}
+
+header input {
+    padding-left: 14px;
+}
+
+header #search {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header :is(#catalog, #find):hover {
+    --back: var(--brown);
+    --color: var(--white);
+}
+
+header #client {
+    display: flex;
+}
+
+header #client > div {
+    position: relative;
+}
+
+#openModal {
+    padding: 4px;
+}
+
+header #auth ul {
+    background: rgb(var(--white));
+    box-shadow: 0 0 0 1px rgb(var(--brown));
+    border-radius: var(--r-def);
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    overflow: hidden;
+}
+
+header #auth ul li {
+    box-shadow: 0 1px 0 rgba(var(--brown), 0.4);
+}
+
+header #auth ul a {
+    padding: 6px 0;
+}
